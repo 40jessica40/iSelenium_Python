@@ -1,0 +1,329 @@
+<testsuite name="site_list.站点管理-站点列表" tests="11" errors="5" failures="0" skipped="0" time="99.838376" timestamp="2020-10-06T15:32:26.790373" hostname="DESKTOP-4JFO9OB"><testcase classname="site_list.站点管理-站点列表" name="click site management -- @1.1 " status="passed" time="19.844038"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click site management -- @1.1 
+    When I move to element "xpath=>/html/body/div[1]/div/div/div[1]/div[1]/div[2]/ul/div[4]/li/div/i" ... passed in 1.296s
+    When I pause for 2000ms ... passed in 2.001s
+    When I click on the link element "/siteManage/list" ... passed in 6.337s
+    Then I want to refresh the window ... passed in 9.177s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[1]" is visible ... passed in 1.033s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+link_target_length-------------> 32
+href-------------> http://192.168.2.87:30080/siteManage/list
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click add new site for site_info_writing -- @1.1 " status="failed" time="4.160113"><error type="IndexError" message="list index out of range">
+<![CDATA[
+Failing step: Then I select the 1nd option of dropdown_item ... failed in 0.010s
+Location: features/site_list.feature:21
+Traceback (most recent call last):
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\webdriver_steps.py", line 49, in step_impl
+    print("li[index].text------------------->", li[index].text)
+IndexError: list index out of range
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[1]/span
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[1]/div/div/div/div/span/span/i
+context.ul.text-------------> 
+index----------------------------> 1]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click add new site for site_info_writing -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[1]/span" ... passed in 0.085s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[1]/div/div/div/div/span/span/i" ... passed in 0.049s
+    When I select the 4th option for element "classes=>el-select-dropdown__list" ... passed in 2.016s
+    When I pause for 2000ms ... passed in 2.000s
+    Then I select the 1nd option of dropdown_item ... failed in 0.010s
+    When I set varied "__ID" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[5]/div/div/div/input" ... skipped in 0.000s
+    And I set "泰坦尼克号" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[4]/div/div/div/input" ... skipped in 0.000s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[6]/div/div/div/div[1]/span/span/i" ... skipped in 0.000s
+    When I select the 4th option for element "classes=>el-select-dropdown__list" ... skipped in 0.000s
+    Then I select the 2nd option of dropdown_item ... skipped in 0.000s
+    When I set "192.168.9.0" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[7]/div/div/div[1]/input" ... skipped in 0.000s
+    And I set "站点后台地址" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[8]/div/div/div/input" ... skipped in 0.000s
+    When I click on the button "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[3]/div/button[2]" ... skipped in 0.000s
+    Then I wait on element "class=>el-notification" for 10000ms to be visible ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[1]/span
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/div[1]/div/div/div/div/span/span/i
+context.ul.text-------------> 
+index----------------------------> 1
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click one maintain -- @1.1 " status="passed" time="15.118755"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click one maintain -- @1.1 
+    Then I want to refresh the window ... passed in 13.219s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[3]/span" is visible ... passed in 0.571s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[3]/span" ... passed in 0.045s
+    Then I select the 9th option of elements "classes=>el-button--small" and click ... passed in 1.283s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[3]/span
+elem .text--------------> 
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click one recover -- @1.1 " status="passed" time="2.540697"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click one recover -- @1.1 
+    Then I want to refresh the window ... passed in 0.616s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[2]/span" is visible ... passed in 0.527s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[2]/span" ... passed in 0.122s
+    Then I select the 9th option of elements "classes=>el-button--small" and click ... passed in 1.276s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[5]/button[2]/span
+elem .text--------------> 
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click config backend -- @1.1 " status="passed" time="7.0493"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click config backend -- @1.1 
+    Then I want to refresh the window ... passed in 0.542s
+    When I click on the element "xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[1]/span" ... passed in 1.160s
+    When I pause for 2000ms ... passed in 2.001s
+    When I select the 6th option of elements "classes=>el-input__inner" and set value "a123456" ... passed in 0.064s
+    When I pause for 2000ms ... passed in 2.001s
+    When I select the 9th option of elements "classes=>el-button--small" and click ... passed in 1.282s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[1]/span
+elem .text--------------> 确定
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click freeze -- @1.1 " status="failed" time="16.122343"><error type="InvalidElementStateException" message="Message: invalid element state&#10;  (Session info: chrome=85.0.4183.121)&#10;">
+<![CDATA[
+Failing step: When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.019s
+Location: features/site_list.feature:73
+Traceback (most recent call last):
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\webdriver_steps.py", line 58, in step_impl
+    elem.clear()
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 95, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=85.0.4183.121)
+
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[2]/span]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click freeze -- @1.1 
+    Then I want to refresh the window ... passed in 12.881s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[2]/span" ... passed in 1.221s
+    When I pause for 2000ms ... passed in 2.001s
+    When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.019s
+    When I pause for 2000ms ... skipped in 0.000s
+    When I select the 7th option of elements "classes=>el-button--small" and click ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[2]/span
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click unblock -- @1.1 " status="failed" time="4.044285"><error type="InvalidElementStateException" message="Message: invalid element state&#10;  (Session info: chrome=85.0.4183.121)&#10;">
+<![CDATA[
+Failing step: When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.016s
+Location: features/site_list.feature:90
+Traceback (most recent call last):
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\webdriver_steps.py", line 58, in step_impl
+    elem.clear()
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 95, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=85.0.4183.121)
+
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[2]/span]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click unblock -- @1.1 
+    Then I want to refresh the window ... passed in 0.731s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[2]/span" ... passed in 1.296s
+    When I pause for 2000ms ... passed in 2.001s
+    When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.016s
+    When I pause for 2000ms ... skipped in 0.000s
+    When I select the 4th option of elements "classes=>el-button--primary" and click ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[2]/span
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click close -- @1.1 " status="failed" time="3.877369"><error type="InvalidElementStateException" message="Message: invalid element state&#10;  (Session info: chrome=85.0.4183.121)&#10;">
+<![CDATA[
+Failing step: When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.014s
+Location: features/site_list.feature:107
+Traceback (most recent call last):
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\webdriver_steps.py", line 58, in step_impl
+    elem.clear()
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 95, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=85.0.4183.121)
+
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[3]]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click close -- @1.1 
+    Then I want to refresh the window ... passed in 0.604s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[3]" ... passed in 1.259s
+    When I pause for 2000ms ... passed in 2.001s
+    When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.014s
+    When I pause for 2000ms ... skipped in 0.000s
+    When I select the 7th option of elements "classes=>el-button--small" and click ... skipped in 0.000s
+    When I pause for 2000ms ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[3]
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click open -- @1.1 " status="failed" time="3.640814"><error type="InvalidElementStateException" message="Message: invalid element state&#10;  (Session info: chrome=85.0.4183.121)&#10;">
+<![CDATA[
+Failing step: When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.015s
+Location: features/site_list.feature:124
+Traceback (most recent call last):
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\webdriver_steps.py", line 58, in step_impl
+    elem.clear()
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 95, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "c:\users\rachel\pycharmprojects\my_works\web_automation\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=85.0.4183.121)
+
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[3]]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click open -- @1.1 
+    Then I want to refresh the window ... passed in 0.523s
+    When I click on the element "xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[3]" ... passed in 1.103s
+    When I pause for 2000ms ... passed in 2.000s
+    When I select the 4th option of elements "classes=>el-input__inner" and set value "a123456" ... failed in 0.015s
+    When I pause for 2000ms ... skipped in 0.000s
+    When I select the 7th option of elements "classes=>el-button--small" and click ... skipped in 0.000s
+    When I pause for 2000ms ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[3]
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click maintain -- @1.1 " status="passed" time="4.889515"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click maintain -- @1.1 
+    Then I want to refresh the window ... passed in 0.486s
+    Then I expect that element "xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[4]/span" is visible ... passed in 1.037s
+    When I click on the element "xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[4]/span" ... passed in 0.079s
+    Then I select the 4th option of elements "classes=>el-button--primary" and click ... passed in 1.287s
+    When I pause for 2000ms ... passed in 2.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[4]/span
+elem .text--------------> 
+
+]]>
+</system-out></testcase><testcase classname="site_list.站点管理-站点列表" name="click recover -- @1.1 " status="passed" time="18.551148"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click recover -- @1.1 
+    Then I want to refresh the window ... passed in 13.998s
+    Then I expect that element "xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[4]" is visible ... passed in 1.093s
+    When I click on the element "xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[4]" ... passed in 0.180s
+    Then I select the 7th option of elements "classes=>el-button--small" and click ... passed in 1.280s
+    When I pause for 2000ms ... passed in 2.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[13]/div/button[4]
+elem .text--------------> 
+
+]]>
+</system-out></testcase></testsuite>

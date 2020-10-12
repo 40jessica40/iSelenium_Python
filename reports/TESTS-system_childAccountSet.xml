@@ -1,0 +1,104 @@
+<testsuite name="system_childAccountSet.系统管理-人员角色管理" tests="6" errors="0" failures="0" skipped="0" time="0.0" timestamp="2020-10-07T17:22:16.838008" hostname="DESKTOP-4JFO9OB"><testcase classname="system_childAccountSet.系统管理-人员角色管理" name="click childAccountSet -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click childAccountSet -- @1.1 
+    When I move to element "xpath=>/html/body/div[1]/div/div/div[1]/div[1]/div[2]/ul/div[7]/li/div/i" ... untested in 0.000s
+    When I click on the link element "#/systeManage/childAccountSet" ... untested in 0.000s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[1]" is visible ... untested in 0.000s
+    Then I want to refresh the window ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="system_childAccountSet.系统管理-人员角色管理" name="click role management and add -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click role management and add -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[1]/div/div/div/div[3]" ... untested in 0.000s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[1]/div/div/div[2]/button/span" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[4]/div/div[1]/div[1]/span" is visible ... untested in 0.000s
+    When I set "角色名称" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[4]/div/div[1]/div[2]/form/div[1]/div[1]/div/div/div/input" ... untested in 0.000s
+    When I set "备注" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[4]/div/div[1]/div[2]/form/div[1]/div[2]/div/div/div/textarea" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    Then I scroll to the bottom ... untested in 0.000s
+    When I select the 7th option of elements "classes=>el-checkbox__inner" and click ... untested in 0.000s
+    When I select the 9th option of elements "classes=>el-checkbox__inner" and click ... untested in 0.000s
+    When I select the 3th option of elements "classes=>el-button--primary" and click ... untested in 0.000s
+    Then I wait on element "class=>el-notification__title" for 2000ms to be visible ... untested in 0.000s
+    Then I see that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/table/tbody/tr[1]/td[7]/div/span" contains the text "nice001" ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="system_childAccountSet.系统管理-人员角色管理" name="click edit -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click edit -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/table/tbody/tr[1]/td[8]/div/div/span[1]" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[4]/div/div[1]/div[1]/span" is visible ... untested in 0.000s
+    When I set "编辑角色名称" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[4]/div/div[1]/div[2]/form/div[1]/div[1]/div/div/div/input" ... untested in 0.000s
+    When I click on the button "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[4]/div/div[1]/div[3]/div/button[2]" ... untested in 0.000s
+    Then I wait on element "class=>el-notification" for 1000ms to be visible ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="system_childAccountSet.系统管理-人员角色管理" name="click role_management_location and delete this role -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click role_management_location and delete this role -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[1]/div/div/div/div[3]" ... untested in 0.000s
+    Given the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/table/tbody/tr[1]/td[8]/div/div/span[2]/span" is visible ... untested in 0.000s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div[3]/table/tbody/tr[1]/td[8]/div/div/span[2]/span" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    When I click on the element "xpath=>/html/body/div[3]/div/div[3]/button[2]/span" ... untested in 0.000s
+    Then I wait on element "class=>el-notification" for 1000ms to be visible ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="system_childAccountSet.系统管理-人员角色管理" name="click manager management and add -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click manager management and add -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[1]/div/div/div/div[2]" ... untested in 0.000s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[1]/form/div[5]/button[2]" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[4]/div/div/div[1]/span" is visible ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    Then I select the 7st option of elements "classes=>el-input__inner" and set value "account001" ... untested in 0.000s
+    Then I select the 9st option of elements "classes=>el-input__inner" and set value "a123456" ... untested in 0.000s
+    Then I select the 10st option of elements "classes=>el-input__inner" and set value "testnickname" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[4]/div/div/div[2]/form/div/div[4]/div/div/div/div[1]/span/span/i" ... untested in 0.000s
+    When I select the 4th option for element "classes=>el-scrollbar__view" ... untested in 0.000s
+    Then I select the 0th option of dropdown_item ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    When I click on the button "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[4]/div/div/div[3]/div/button[2]" ... untested in 0.000s
+    Then I wait on element "class=>el-notification" for 1000ms to be visible ... untested in 0.000s
+    Then I want to refresh the window ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="system_childAccountSet.系统管理-人员角色管理" name="select role  and search -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select role  and search -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[1]/form/div[2]/div/div/div/span/span/i" ... untested in 0.000s
+    When I pause for 4000ms ... untested in 0.000s
+    When I select the 3th option for element "classes=>el-select-dropdown__list" ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    Then I select the 2th option of dropdown_item ... untested in 0.000s
+    When I pause for 1000ms ... untested in 0.000s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[1]/form/div[3]/div/div/div[1]/span/span/i" ... untested in 0.000s
+    When I select the 4th option for element "classes=>el-select-dropdown__list" ... untested in 0.000s
+    Then I select the 0th option of dropdown_item ... untested in 0.000s
+    Then I see that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div[3]/table/tbody/tr/td[6]/div/span" contains the text "nice001" ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

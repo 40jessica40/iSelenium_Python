@@ -1,0 +1,180 @@
+<testsuite name="site_review.站点管理-站点审核" tests="8" errors="0" failures="0" skipped="0" time="65.940811" timestamp="2020-10-06T22:55:48.196100" hostname="DESKTOP-4JFO9OB"><testcase classname="site_review.站点管理-站点审核" name="click site management and site review -- @1.1 " status="passed" time="19.828742"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click site management and site review -- @1.1 
+    When I move to element "xpath=>/html/body/div[1]/div/div/div[1]/div[1]/div[2]/ul/div[4]/li/div/i" ... passed in 1.346s
+    When I pause for 2000ms ... passed in 2.002s
+    When I click on the link element "/siteManage/review" ... passed in 6.171s
+    Then I want to refresh the window ... passed in 9.217s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[1]" is visible ... passed in 1.093s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+link_target_length-------------> 32
+href-------------> http://192.168.2.87:30080/siteManage/review
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select review name and search -- @1.1 " status="passed" time="13.802004"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select review name and search -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[2]/div/div/div/span/span/i" ... passed in 0.045s
+    When I select the 2th option for element "classes=>el-select-dropdown__list" ... passed in 2.021s
+    Then I select the 4nd option of dropdown_item ... passed in 2.045s
+    When I set "nice001" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[3]/div/div/input" ... passed in 2.069s
+    When I pause for 5000ms ... passed in 5.001s
+    Then I select the 0th option of elements "classes=>el-button--small" and click ... passed in 1.291s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div/span" contains the text "nice001" ... passed in 0.033s
+    Then I select the 1th option of elements "classes=>el-button--small" and click ... passed in 1.298s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[2]/div/div/div/span/span/i
+context.ul.text-------------> 所属公司ID
+站点ID
+站点名称
+公司上级
+申请人
+index----------------------------> 4
+li[index].text-------------------> 申请人
+elem .text--------------> 搜索
+elem .text--------------> 重置
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select  reviewing -- @1.1 " status="passed" time="6.197247"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select  reviewing -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i" ... passed in 0.045s
+    When I select the 2th option for element "classes=>el-select-dropdown__list" ... passed in 2.017s
+    Then I select the 1nd option of dropdown_item ... passed in 2.049s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/button[1]" ... passed in 0.038s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/span" is visible ... passed in 0.026s
+    When I pause for 2000ms ... passed in 2.001s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/span" contains the text "审核中" ... passed in 0.021s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i
+context.ul.text-------------> 全部
+审核中
+已通过
+已拒绝
+index----------------------------> 1
+li[index].text-------------------> 审核中
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/button[1]
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select reviewing to refuse -- @1.1 " status="passed" time="2.678448"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select reviewing to refuse -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button[2]" ... passed in 0.053s
+    When I set "填写备注" to the inputfield "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[2]/form/div/textarea" ... passed in 2.065s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[3]/div/button[2]" ... passed in 0.035s
+    Then I wait on element "class=>el-notification" for 1000ms to be visible ... passed in 0.525s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button[2]
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[4]/div/div/div[3]/div/button[2]
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select  reviewing -- @1.1 " status="passed" time="6.132883"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select  reviewing -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i" ... passed in 0.028s
+    When I select the 2th option for element "classes=>el-select-dropdown__list" ... passed in 2.011s
+    Then I select the 1nd option of dropdown_item ... passed in 2.031s
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/button[1]" ... passed in 0.027s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/span" is visible ... passed in 0.020s
+    When I pause for 2000ms ... passed in 2.001s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/span" contains the text "审核中" ... passed in 0.015s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i
+context.ul.text-------------> 全部
+审核中
+已通过
+已拒绝
+index----------------------------> 1
+li[index].text-------------------> 审核中
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/button[1]
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select reviewing to pass -- @1.1 " status="passed" time="5.110122"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select reviewing to pass -- @1.1 
+    When I pause for 2000ms ... passed in 2.001s
+    Then I select the 0th option of elements "classes=>el-button--text" and click ... passed in 1.301s
+    Then I select the 2th option of elements "classes=>el-button--default" and click ... passed in 1.281s
+    Then I wait on element "class=>el-notification" for 10000ms to be visible ... passed in 0.528s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+elem .text--------------> 通过
+elem .text--------------> 
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select  having passed -- @1.1 " status="passed" time="6.09694"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select  having passed -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i" ... passed in 0.031s
+    When I select the 2th option for element "classes=>el-select-dropdown__list" ... passed in 2.011s
+    Then I select the 2nd option of dropdown_item ... passed in 2.039s
+    When I pause for 2000ms ... passed in 2.001s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/span" contains the text "已通过" ... passed in 0.015s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i
+context.ul.text-------------> 全部
+审核中
+已通过
+已拒绝
+index----------------------------> 2
+li[index].text-------------------> 已通过
+
+]]>
+</system-out></testcase><testcase classname="site_review.站点管理-站点审核" name="select  having refused -- @1.1 " status="passed" time="6.094424"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: select  having refused -- @1.1 
+    When I click on the element "xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i" ... passed in 0.027s
+    When I select the 2th option for element "classes=>el-select-dropdown__list" ... passed in 2.011s
+    Then I select the 3rd option of dropdown_item ... passed in 2.040s
+    When I pause for 2000ms ... passed in 2.000s
+    Then I expect that element "xpath=>/html/body/div[1]/div/div/section/div/div/div[3]/div[1]/div[3]/table/tbody/tr[1]/td[10]/div/span" contains the text "已拒绝" ... passed in 0.016s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+--------------------->element xpath=>/html/body/div[1]/div/div/section/div/div/div[2]/form/div[4]/div/div/div/span/span/i
+context.ul.text-------------> 全部
+审核中
+已通过
+已拒绝
+index----------------------------> 3
+li[index].text-------------------> 已拒绝
+
+]]>
+</system-out></testcase></testsuite>

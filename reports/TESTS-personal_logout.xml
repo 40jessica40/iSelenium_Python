@@ -1,0 +1,16 @@
+<testsuite name="personal_logout.个人中心-登出" tests="1" errors="0" failures="0" skipped="0" time="0.0" timestamp="2020-10-08T22:41:12.083943" hostname="DESKTOP-4JFO9OB"><testcase classname="personal_logout.个人中心-登出" name="click logout -- @1.1 " status="untested" time="0"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: click logout -- @1.1 
+    When I move to element "xpath=>/html/body/div[1]/div/div/div[1]/div[1]/div[1]/ul/li/div/span" ... untested in 0.000s
+    When I select the 6th option for element "classes=>el-menu--popup-bottom-start" ... untested in 0.000s
+    Then I select the 1nd option of dropdown_item ... untested in 0.000s
+    When I pause for 4000ms ... untested in 0.000s
+    Then I want to refresh the window ... untested in 0.000s
+    Then I expect that the url is "{BASE_URL}/#/login" ... untested in 0.000s
+    Then I want to close the window ... untested in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
