@@ -3,6 +3,8 @@ import os
 import sys
 import shutil
 sys.path.append(r'/Users/wangpanzhen/test/behave_test1/iSelenium_Python/venv/lib/python3.7/site-packages')
+print("os----->", os.path.abspath(os.path.join(os.environ['HOME'], 'venv/lib/python3.7/site-packages')))
+sys.path.append(r'/Users/wangpanzhen/test/behave_test1/iSelenium_Python/venv/lib/python3.7/site-packages')
 print("----------->", sys.path)
 def get_config():
     config = configparser.ConfigParser()
@@ -42,6 +44,7 @@ def get_driver(**kwargs):
     else:
         ex_path = shutil.which(Driver._driver_name) or pwd_driver_path
     ex_path = config.get('driver', 'chrome_driver')
+    print("ex_path---------->", ex_path)
     kwargs['executable_path'] = ex_path
     if os.environ.get('BEHAVE_WEBDRIVER_HEADLESS', None) and hasattr(Driver, 'headless'):
         Driver = Driver.headless
