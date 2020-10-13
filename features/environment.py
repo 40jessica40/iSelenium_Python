@@ -2,7 +2,8 @@ import configparser
 import os
 import sys
 import shutil
-
+sys.path.append(r'/Users/wangpanzhen/test/behave_test1/iSelenium_Python/venv/lib/python3.7/site-packages')
+print("----------->", sys.path)
 def get_config():
     config = configparser.ConfigParser()
     config.read('iselenium.ini')
@@ -10,7 +11,8 @@ def get_config():
     # config.read(os.path.join('iselenium.ini'))
     # return config
 get_config()
-
+print('*--------------PATH--------------------*')
+print(os.environ['PATH'])
 
 from behave_webdriver import before_all_factory, use_fixture_tag
 from behave_webdriver.driver import Chrome, ChromeOptions
