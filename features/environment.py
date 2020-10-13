@@ -2,10 +2,12 @@ import configparser
 import os
 import sys
 import shutil
-sys.path.append(r'/Users/wangpanzhen/test/behave_test1/iSelenium_Python/venv/lib/python3.7/site-packages')
-print("os----->", os.path.abspath(os.path.join(os.environ['HOME'], 'venv/lib/python3.7/site-packages')))
-sys.path.append(r'/Users/wangpanzhen/test/behave_test1/iSelenium_Python/venv/lib/python3.7/site-packages')
-print("----------->", sys.path)
+# sys.path.append(r'/Users/wangpanzhen/test/behave_test1/iSelenium_Python/venv/lib/python3.7/site-packages')
+# print("os----->", os.path.abspath(os.path.join(sys.argv[0], 'venv/lib/python3.7/site-packages')))
+# path= os.path.abspath(os.path.join(sys.argv[0], "venv/lib/python3.7/site-packages"))
+path= os.path.abspath(os.path.join(os.path.abspath('.'), "venv/lib/python3.7/site-packages"))
+sys.path.append(path)
+print("path----------->",path)
 def get_config():
     config = configparser.ConfigParser()
     config.read('iselenium.ini')
