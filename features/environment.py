@@ -1,4 +1,13 @@
 import configparser
+
+def get_config():
+    config = configparser.ConfigParser()
+    config.read('iselenium.ini')
+    config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
+    # config.read(os.path.join('iselenium.ini'))
+    # return config
+get_config()
+
 import os
 import sys
 import shutil
@@ -13,12 +22,6 @@ from helpers.log import Log
 log = Log()
 
 
-def get_config():
-    config = configparser.ConfigParser()
-    config.read('iselenium.ini')
-    config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
-    # config.read(os.path.join('iselenium.ini'))
-    # return config
 
 def get_driver(**kwargs):
     args = []
@@ -45,7 +48,7 @@ def get_driver(**kwargs):
 def before_all(context):
 
     log.info("---------------------测试开始---------------------------")
-    get_config()
+    # get_config()
 
 
     userdata = context.config.userdata
