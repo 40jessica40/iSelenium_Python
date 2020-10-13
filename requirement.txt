@@ -1,8 +1,4 @@
-behave
-selenium
-requests
 behave-webdriver
-selenium-requests
 nose
 allure-behave
 redis

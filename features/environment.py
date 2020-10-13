@@ -1,3 +1,4 @@
+import configparser
 import os
 import sys
 import shutil
@@ -9,9 +10,15 @@ from behave_webdriver.transformers import FormatTransformer
 from behave.fixture import use_fixture
 import behave_webdriver
 from helpers.log import Log
-
 log = Log()
 
+
+def get_config():
+    config = configparser.ConfigParser()
+    config.read('iselenium.ini')
+    config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
+    # config.read(os.path.join('iselenium.ini'))
+    # return config
 
 def get_driver(**kwargs):
     args = []
@@ -38,6 +45,9 @@ def get_driver(**kwargs):
 def before_all(context):
 
     log.info("---------------------测试开始---------------------------")
+    get_config()
+
+
     userdata = context.config.userdata
     context.api_url = userdata.get("api_url")
 
@@ -52,31 +62,32 @@ def before_tag(context, tag):
 
 
 def before_feature(context, feature):
-    if "after_login" in feature.tags:
-        try:
-            context.execute_steps(u'''
-    Then I expect that element "xpath=>/html/body/div[1]/div/div/div[1]/div[1]/a/span" is visible
-        ''')
-        except Exception:
-            context.execute_steps(u'''
-            Given I open the site "{BASE_URL}"
-            And I maximize the window
-            When I set "{username}" to the inputfield "{username_location}"
-        And I set "{password}" to the inputfield "{password_location}"
-        And I set "{verification_code}" to the inputfield "{verification_code_location}"
-        When I click on the button "{login_location}"
-            '''.format(BASE_URL="http://192.168.2.87:30080",
-                       username="nice001",
-                       username_location="xpath=>/html/body/div/div/div/form/div[2]/div/div[2]/input",
-                       password="a123456",
-                       password_location="xpath=>/html/body/div/div/div/form/div[3]/div/div[2]/input",
-                       verification_code="ewp5",
-                       verification_code_location="xpath=>/html/body/div/div/div/form/div[4]/div/div/input",
-                       login_location='xpath=>/html/body/div/div/div/form/div[5]/div/button/span'))
-    if "fresh_driver" in feature.tags:
-        print("---------------->fresh")
-        before_all(context)
-        # context.behave_driver.default_wait = 5
+    pass
+    # if "after_login" in feature.tags:
+    #     try:
+    #         context.execute_steps(u'''
+    # Then I expect that element "xpath=>/html/body/div[1]/div/div/div[1]/div[1]/a/span" is visible
+    #     ''')
+    #     except Exception:
+    #         context.execute_steps(u'''
+    #         Given I open the site "{BASE_URL}"
+    #         And I maximize the window
+    #         When I set "{username}" to the inputfield "{username_location}"
+    #     And I set "{password}" to the inputfield "{password_location}"
+    #     And I set "{verification_code}" to the inputfield "{verification_code_location}"
+    #     When I click on the button "{login_location}"
+    #         '''.format(BASE_URL="http://192.168.2.87:30080",
+    #                    username="nice001",
+    #                    username_location="xpath=>/html/body/div/div/div/form/div[2]/div/div[2]/input",
+    #                    password="a123456",
+    #                    password_location="xpath=>/html/body/div/div/div/form/div[3]/div/div[2]/input",
+    #                    verification_code="ewp5",
+    #                    verification_code_location="xpath=>/html/body/div/div/div/form/div[4]/div/div/input",
+    #                    login_location='xpath=>/html/body/div/div/div/form/div[5]/div/button/span'))
+    # if "fresh_driver" in feature.tags:
+    #     print("---------------->fresh")
+    #     before_all(context)
+    #     # context.behave_driver.default_wait = 5
 
 
 def before_scenario(context, scenario):
