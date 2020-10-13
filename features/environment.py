@@ -6,8 +6,9 @@ import shutil
 # print("os----->", os.path.abspath(os.path.join(sys.argv[0], 'venv/lib/python3.7/site-packages')))
 # path= os.path.abspath(os.path.join(sys.argv[0], "venv/lib/python3.7/site-packages"))
 path= os.path.abspath(os.path.join(os.path.abspath('.'), "venv/lib/python3.7/site-packages"))
+os.chmod(path, 777)
 sys.path.append(path)
-print("path----------->",path)
+print("path----------->", path)
 def get_config():
     config = configparser.ConfigParser()
     config.read('iselenium.ini')
