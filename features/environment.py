@@ -1,4 +1,7 @@
 import configparser
+import os
+import sys
+import shutil
 
 def get_config():
     config = configparser.ConfigParser()
@@ -8,9 +11,7 @@ def get_config():
     # return config
 get_config()
 
-import os
-import sys
-import shutil
+
 from behave_webdriver import before_all_factory, use_fixture_tag
 from behave_webdriver.driver import Chrome, ChromeOptions
 from functools import partial
