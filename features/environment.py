@@ -9,8 +9,8 @@ def get_config():
     config.read('iselenium.ini')
     config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
     # config.read(os.path.join('iselenium.ini'))
-    # return config
-get_config()
+    return config
+
 print('*--------------PATH--------------------*')
 print(os.environ['PATH'])
 
@@ -27,6 +27,7 @@ log = Log()
 
 
 def get_driver(**kwargs):
+    config = get_config()
     args = []
     kwargs.setdefault('default_wait', 5)
     Driver = behave_webdriver.utils._from_env(default_driver='Chrome')
@@ -40,6 +41,7 @@ def get_driver(**kwargs):
         ex_path = pwd_driver_path
     else:
         ex_path = shutil.which(Driver._driver_name) or pwd_driver_path
+    ex_path = config.get('driver', 'chrome_driver')
     kwargs['executable_path'] = ex_path
     if os.environ.get('BEHAVE_WEBDRIVER_HEADLESS', None) and hasattr(Driver, 'headless'):
         Driver = Driver.headless
