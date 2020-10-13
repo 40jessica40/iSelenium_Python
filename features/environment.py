@@ -21,14 +21,7 @@ from behave.fixture import use_fixture
 import behave_webdriver
 from helpers.log import Log
 log = Log()
-print('*---------------ENVIRON-------------------*')
-print(os.environ)
-print('*----------------HOME------------------*')
-# Access a particular environment variable
-print(os.environ['HOME'])
-print('*--------------PATH--------------------*')
-print(os.environ['PATH'])
-print('*----------------------------------*')
+
 
 
 def get_driver(**kwargs):
@@ -54,6 +47,14 @@ def get_driver(**kwargs):
 
 
 def before_all(context):
+    print('*---------------ENVIRON-------------------*')
+    print(os.environ)
+    print('*----------------HOME------------------*')
+    # Access a particular environment variable
+    print(os.environ['HOME'])
+    print('*--------------PATH--------------------*')
+    print(os.environ['PATH'])
+    print('*----------------------------------*')
 
     log.info("---------------------测试开始---------------------------")
     # get_config()
