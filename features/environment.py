@@ -47,7 +47,7 @@ def get_driver(**kwargs):
         ex_path = pwd_driver_path
     else:
         ex_path = shutil.which(Driver._driver_name) or pwd_driver_path
-    # ex_path = config.get('driver', 'chrome_driver')
+    ex_path = config.get('driver', 'chrome_driver')
     print("ex_path---------->", ex_path)
     kwargs['executable_path'] = ex_path
     if os.environ.get('BEHAVE_WEBDRIVER_HEADLESS', None) and hasattr(Driver, 'headless'):
